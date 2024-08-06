@@ -44,7 +44,7 @@ jobs:
     - name: Run api tests (dc)
       run: poetry run python -X faulthandler -m pytest -p no:faulthandler tests/api/dc
     - name: Run api tests (fmr)
-      run: poetry run pytest --full-trace tests/api/fmr
+      run: poetry run python -X faulthandler -v -m pytest -p --full-trace tests/api/fmr
     # - name: Run api tests (qb)
     #   run: poetry run python -X faulthandler -m pytest -p no:faulthandler tests/api/qb
     # - name: Run tests
